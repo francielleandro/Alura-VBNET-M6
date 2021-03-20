@@ -14,12 +14,36 @@
     End Sub
 
     Private Sub Btn_Principal_Click(sender As Object, e As EventArgs) Handles Btn_Principal.Click
+        Try
+            ExecutaTesteURL()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Sub ExecutaTesteURL()
+
         Dim url As String = Txt_Url.Text
         Dim separador As String = Txt_Separador.Text
-        Dim posiçaoInt As Integer = InStr(url, separador)
-        MsgBox(posiçaoInt.ToString)
-        MsgBox(url)
-        Dim principal As String = url.Substring(posiçaoInt)
+
+        If url = "" Then
+            Throw New Exception("URL vazia")
+        End If
+
+        If separador = "" Then
+            Throw New Exception("Separador vazio")
+        End If
+
+        Dim posicaoInt As Integer = InStr(url, separador)
+
+        If posicaoInt = 0 Then
+            Throw New Exception("Posição vazia")
+        End If
+
+        Dim principal As String = url.Substring(posicaoInt)
+
         MsgBox(principal)
+
     End Sub
 End Class
