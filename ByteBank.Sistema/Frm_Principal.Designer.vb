@@ -28,6 +28,7 @@ Partial Class Frm_Principal
         Me.Lbl_Separador = New System.Windows.Forms.Label()
         Me.Txt_Url = New System.Windows.Forms.TextBox()
         Me.Txt_Separador = New System.Windows.Forms.TextBox()
+        Me.Btn_Principal2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal
@@ -41,9 +42,9 @@ Partial Class Frm_Principal
         '
         'Btn_Principal
         '
-        Me.Btn_Principal.Location = New System.Drawing.Point(188, 195)
+        Me.Btn_Principal.Location = New System.Drawing.Point(74, 172)
         Me.Btn_Principal.Name = "Btn_Principal"
-        Me.Btn_Principal.Size = New System.Drawing.Size(144, 67)
+        Me.Btn_Principal.Size = New System.Drawing.Size(124, 27)
         Me.Btn_Principal.TabIndex = 1
         Me.Btn_Principal.Text = "Button1"
         Me.Btn_Principal.UseVisualStyleBackColor = True
@@ -70,21 +71,31 @@ Partial Class Frm_Principal
         '
         Me.Txt_Url.Location = New System.Drawing.Point(74, 73)
         Me.Txt_Url.Name = "Txt_Url"
-        Me.Txt_Url.Size = New System.Drawing.Size(473, 20)
+        Me.Txt_Url.Size = New System.Drawing.Size(348, 20)
         Me.Txt_Url.TabIndex = 4
         '
         'Txt_Separador
         '
         Me.Txt_Separador.Location = New System.Drawing.Point(74, 128)
         Me.Txt_Separador.Name = "Txt_Separador"
-        Me.Txt_Separador.Size = New System.Drawing.Size(473, 20)
+        Me.Txt_Separador.Size = New System.Drawing.Size(348, 20)
         Me.Txt_Separador.TabIndex = 5
+        '
+        'Btn_Principal2
+        '
+        Me.Btn_Principal2.Location = New System.Drawing.Point(303, 172)
+        Me.Btn_Principal2.Name = "Btn_Principal2"
+        Me.Btn_Principal2.Size = New System.Drawing.Size(119, 27)
+        Me.Btn_Principal2.TabIndex = 6
+        Me.Btn_Principal2.Text = "Button1"
+        Me.Btn_Principal2.UseVisualStyleBackColor = True
         '
         'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 310)
+        Me.ClientSize = New System.Drawing.Size(519, 277)
+        Me.Controls.Add(Me.Btn_Principal2)
         Me.Controls.Add(Me.Txt_Separador)
         Me.Controls.Add(Me.Txt_Url)
         Me.Controls.Add(Me.Lbl_Separador)
@@ -105,4 +116,5 @@ Partial Class Frm_Principal
     Friend WithEvents Lbl_Separador As Label
     Friend WithEvents Txt_Url As TextBox
     Friend WithEvents Txt_Separador As TextBox
+    Friend WithEvents Btn_Principal2 As Button
 End Class
