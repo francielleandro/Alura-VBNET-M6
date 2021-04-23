@@ -1,4 +1,5 @@
-﻿Public Class Frm_Principal
+﻿Imports ByteBank.Bibliotecas.Classes
+Public Class Frm_Principal
     Public Sub New()
 
         ' This call is required by the designer.
@@ -26,6 +27,8 @@
     Sub ExecutaTesteURL()
 
         Dim url As String = Txt_Url.Text
+        Dim X As New ExtrairValorDeArgumentosUrl(url)
+
         Dim separador As String = Txt_Separador.Text
 
         If url = "" Then
@@ -36,7 +39,7 @@
             Throw New Exception("Separador vazio")
         End If
 
-        Dim posicaoInt As Integer = InStr(url, separador)
+        Dim posicaoInt As Integer = InStr(X.url, separador)
 
         If posicaoInt = 0 Then
             Throw New Exception("Posição vazia")
