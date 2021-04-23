@@ -28,6 +28,8 @@ Partial Class Frm_Principal2vb
         Me.Txt_Resultado = New System.Windows.Forms.TextBox()
         Me.Lbl_Resultado = New System.Windows.Forms.Label()
         Me.Btn_Processo = New System.Windows.Forms.Button()
+        Me.Lbl_Propriedade = New System.Windows.Forms.Label()
+        Me.Txt_Propriedade = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Lbl_Principal2
@@ -82,11 +84,29 @@ Partial Class Frm_Principal2vb
         Me.Btn_Processo.Text = "Button1"
         Me.Btn_Processo.UseVisualStyleBackColor = True
         '
+        'Lbl_Propriedade
+        '
+        Me.Lbl_Propriedade.AutoSize = True
+        Me.Lbl_Propriedade.Location = New System.Drawing.Point(13, 391)
+        Me.Lbl_Propriedade.Name = "Lbl_Propriedade"
+        Me.Lbl_Propriedade.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Propriedade.TabIndex = 10
+        Me.Lbl_Propriedade.Text = "Label1"
+        '
+        'Txt_Propriedade
+        '
+        Me.Txt_Propriedade.Location = New System.Drawing.Point(16, 408)
+        Me.Txt_Propriedade.Name = "Txt_Propriedade"
+        Me.Txt_Propriedade.Size = New System.Drawing.Size(649, 20)
+        Me.Txt_Propriedade.TabIndex = 11
+        '
         'Frm_Principal2vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Txt_Propriedade)
+        Me.Controls.Add(Me.Lbl_Propriedade)
         Me.Controls.Add(Me.Btn_Processo)
         Me.Controls.Add(Me.Txt_Resultado)
         Me.Controls.Add(Me.Lbl_Resultado)
@@ -107,4 +127,6 @@ Partial Class Frm_Principal2vb
     Friend WithEvents Txt_Resultado As TextBox
     Friend WithEvents Lbl_Resultado As Label
     Friend WithEvents Btn_Processo As Button
+    Friend WithEvents Lbl_Propriedade As Label
+    Friend WithEvents Txt_Propriedade As TextBox
 End Class
