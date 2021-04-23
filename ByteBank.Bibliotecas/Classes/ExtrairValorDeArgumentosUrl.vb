@@ -2,37 +2,23 @@
 
     Public Class ExtrairValorDeArgumentosUrl
 #Region "Propriedades"
-        Public ReadOnly url As String
+        Public ReadOnly Property url As String
+        Public ReadOnly Property argumento As String
 #End Region
 #Region "Constructors"
 
         Public Sub New(urlString As String)
 
-            If urlString Is Nothing Then
-                Throw New ArgumentNullException(NameOf(urlString), "URL nula")
+            If String.IsNullOrEmpty(urlString) Then
+                Throw New ArgumentException("URL possui valor vazio ou nulo", NameOf(urlString))
             End If
 
-            If urlString = "" Then
-                Throw New ArgumentException("URL vazia", NameOf(urlString))
-            End If
+            Dim posicaoInt As Integer = InStr(urlString, "?")
+            argumento = urlString.Substring(posicaoInt)
 
             url = urlString
         End Sub
 #End Region
 
-        '#Region "metodhs"
-
-        '        Public Function TestVazioOuNulo(vString As String) As Boolean
-        '            If vString Is Nothing Then
-        '                Return True
-        '            End If
-
-        '            If vString = "" Then
-        '                Return True
-        '            End If
-
-        '            Return False
-        '        End Function
-        '#End Region
     End Class
 End Namespace
