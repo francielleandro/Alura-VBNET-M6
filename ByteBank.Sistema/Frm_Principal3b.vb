@@ -1,4 +1,5 @@
 ﻿Imports System.Text.RegularExpressions
+Imports ByteBank.Bibliotecas.Classes
 Imports ByteBank.Bibliotecas.Classes.Clientes
 Imports ByteBank.Bibliotecas.Classes.Funcionarios
 
@@ -13,6 +14,7 @@ Public Class Frm_Principal3b
         Lbl_Principal.Text = "Formulario Principal 3b"
         Btn_Principal.Text = "Testar"
         Btn_Principal03a.Text = "Clique Aqui"
+        Btn_Principal03b.Text = "Clique Aqui"
     End Sub
 
     Private Sub Btn_Principal_Click(sender As Object, e As EventArgs) Handles Btn_Principal.Click
@@ -52,5 +54,12 @@ Public Class Frm_Principal3b
         Else
             MsgBox("NÃO SÃO IGUAIS !!!!")
         End If
+    End Sub
+
+    Private Sub Btn_Principal03b_Click(sender As Object, e As EventArgs) Handles Btn_Principal03b.Click
+        Dim url As String = "https://www.bytebank.com.br/cambio"
+        Dim X As New ExtrairValorDeArgumentosUrl(url)
+        Dim Y As String = X.GetTodosArgumentos()
+        MsgBox(Y)
     End Sub
 End Class

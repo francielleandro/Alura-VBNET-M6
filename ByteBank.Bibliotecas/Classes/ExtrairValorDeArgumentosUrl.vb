@@ -9,15 +9,20 @@
 #Region "Constructors"
 
         Public Sub New(urlString As String)
-            dominio = "https://www.bytebank.com.br"
-            If String.IsNullOrEmpty(urlString) Then
-                Throw New ArgumentException("URL possui valor vazio ou nulo", NameOf(urlString))
+            Dim posicaoInterrogacao As Integer
+            posicaoInterrogacao = urlString.IndexOf("?")
+
+            If posicaoInterrogacao = -1 Then
+                argumento = ""
+            Else
+                argumento = urlString.Substring(posicaoInterrogacao + 1)
             End If
 
-            Dim posicaoInt As Integer = InStr(urlString, "?")
-            argumento = urlString.Substring(posicaoInt)
+            dominio = "https://www.bytebank.com.br"
 
             url = urlString
+
+
         End Sub
 #End Region
 
@@ -46,6 +51,32 @@
 
         Public Function IsByteBank() As Boolean
             Return url.ToLower.StartsWith(dominio)
+        End Function
+
+        Public Function GetTodosArgumentos() As String
+
+            If argumento = "" Then
+                Return ""
+            End If
+            Dim vListaArgumentos As String = String.Empty
+            Dim vIndex As Integer = argumento.IndexOf("&")
+            If vIndex = -1 Then
+                Return argumento
+            Else
+                vListaArgumentos = argumento.Substring(0, vIndex)
+                Dim vArgumentoRestos As String = argumento.Remove(0, vIndex + 1)
+                While vIndex <> -1
+                    vIndex = vArgumentoRestos.IndexOf("&")
+                    If vIndex = -1 Then
+                        vListaArgumentos += vbCrLf + vArgumentoRestos
+                    Else
+                        vListaArgumentos += vbCrLf + vArgumentoRestos.Substring(0, vIndex)
+                        vArgumentoRestos = vArgumentoRestos.Remove(0, vIndex + 1)
+                    End If
+                End While
+            End If
+            Return vListaArgumentos
+
         End Function
 
     End Class
