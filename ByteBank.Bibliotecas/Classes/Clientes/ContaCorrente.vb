@@ -141,6 +141,13 @@ Namespace Classes.Clientes
 
         End Sub
 
+        Public Overrides Function ToString() As String
+
+            Dim X As String = $"Agencia: {agencia} e Conta: {numero} e o saldo atual é {saldo}"
+            Return X
+
+        End Function
+
 #End Region
 
 
