@@ -64,7 +64,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Biblioteca\GerenciadorBonificacao.vb" />
+    <Compile Include="Classes\Biblioteca\IAutenticavel.vb" />
+    <Compile Include="Classes\Clientes\Cliente.vb" />
+    <Compile Include="Classes\Clientes\ContaCorrente.vb" />
+    <Compile Include="Classes\Clientes\OperacaoFinanceiraException.vb" />
+    <Compile Include="Classes\Clientes\ValorSacadoMenorSaldoException.vb" />
+    <Compile Include="Classes\Externos\Representante.vb" />
     <Compile Include="Classes\ExtrairValorDeArgumentosUrl.vb" />
+    <Compile Include="Classes\Funcionarios\Auxiliar.vb" />
+    <Compile Include="Classes\Funcionarios\Desenvolvedor.vb" />
+    <Compile Include="Classes\Funcionarios\Designer.vb" />
+    <Compile Include="Classes\Funcionarios\Funcionario.vb" />
+    <Compile Include="Classes\Funcionarios\FuncionarioAutenticavel.vb" />
+    <Compile Include="Classes\Funcionarios\Gerente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -100,5 +113,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
