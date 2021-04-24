@@ -25,7 +25,7 @@ Partial Class Frm_Principal2vb
         Me.Lbl_Principal2 = New System.Windows.Forms.Label()
         Me.Txt_Url = New System.Windows.Forms.TextBox()
         Me.Lbl_Url = New System.Windows.Forms.Label()
-        Me.Txt_Resultado = New System.Windows.Forms.TextBox()
+        Me.Txt_Argumento = New System.Windows.Forms.TextBox()
         Me.Lbl_Resultado = New System.Windows.Forms.Label()
         Me.Btn_Processo = New System.Windows.Forms.Button()
         Me.Lbl_Propriedade = New System.Windows.Forms.Label()
@@ -58,13 +58,13 @@ Partial Class Frm_Principal2vb
         Me.Lbl_Url.TabIndex = 5
         Me.Lbl_Url.Text = "Label1"
         '
-        'Txt_Resultado
+        'Txt_Argumento
         '
-        Me.Txt_Resultado.Location = New System.Drawing.Point(16, 266)
-        Me.Txt_Resultado.Multiline = True
-        Me.Txt_Resultado.Name = "Txt_Resultado"
-        Me.Txt_Resultado.Size = New System.Drawing.Size(649, 109)
-        Me.Txt_Resultado.TabIndex = 8
+        Me.Txt_Argumento.Location = New System.Drawing.Point(16, 266)
+        Me.Txt_Argumento.Multiline = True
+        Me.Txt_Argumento.Name = "Txt_Argumento"
+        Me.Txt_Argumento.Size = New System.Drawing.Size(649, 109)
+        Me.Txt_Argumento.TabIndex = 8
         '
         'Lbl_Resultado
         '
@@ -108,7 +108,7 @@ Partial Class Frm_Principal2vb
         Me.Controls.Add(Me.Txt_Propriedade)
         Me.Controls.Add(Me.Lbl_Propriedade)
         Me.Controls.Add(Me.Btn_Processo)
-        Me.Controls.Add(Me.Txt_Resultado)
+        Me.Controls.Add(Me.Txt_Argumento)
         Me.Controls.Add(Me.Lbl_Resultado)
         Me.Controls.Add(Me.Txt_Url)
         Me.Controls.Add(Me.Lbl_Url)
@@ -124,7 +124,7 @@ Partial Class Frm_Principal2vb
     Friend WithEvents Lbl_Principal2 As Label
     Friend WithEvents Txt_Url As TextBox
     Friend WithEvents Lbl_Url As Label
-    Friend WithEvents Txt_Resultado As TextBox
+    Friend WithEvents Txt_Argumento As TextBox
     Friend WithEvents Lbl_Resultado As Label
     Friend WithEvents Btn_Processo As Button
     Friend WithEvents Lbl_Propriedade As Label
